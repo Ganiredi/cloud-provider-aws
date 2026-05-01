@@ -15,7 +15,7 @@ popd >/dev/null
 
 git reset --hard HEAD && git clean -xdff
 
-export GOPROXY=direct
+export GOPROXY=https://proxy.golang.org,direct
 export GOSUMDB=off
 
 go mod edit -replace k8s.io/api=../../k8s.io/kubernetes/staging/src/k8s.io/api
